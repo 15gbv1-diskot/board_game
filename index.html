@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Телефон</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <div class="status" id="status">Готов</div>
+      <div class="display" id="display">—</div>
+    </div>
+
+    <div class="keypad">
+      <button data-key="1">1</button>
+      <button data-key="2">2<small>ABC</small></button>
+      <button data-key="3">3<small>DEF</small></button>
+      <button data-key="4">4<small>GHI</small></button>
+      <button data-key="5">5<small>JKL</small></button>
+      <button data-key="6">6<small>MNO</small></button>
+      <button data-key="7">7<small>PQRS</small></button>
+      <button data-key="8">8<small>TUV</small></button>
+      <button data-key="9">9<small>WXYZ</small></button>
+      <button data-key="*">*</button>
+      <button data-key="0">0</button>
+      <button data-key="#">#</button>
+    </div>
+
+    <div class="actions">
+      <button id="call" class="call">📞</button>
+      <button id="reset" class="reset">✕</button>
+    </div>
+  </div>
+
+  <audio id="player"></audio>
+
+  <script src="numbers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
