@@ -359,3 +359,52 @@ body {
 }
 .hangup-btn:hover  { transform: scale(1.05); box-shadow: 0 14px 34px rgba(255, 69, 58, 0.55); }
 .hangup-btn:active { transform: scale(0.94); }
+
+/* =============== SWITCH (тумблер) =============== */
+.settings-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 24px 14px;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13px;
+  color: var(--text-soft);
+  padding: 7px 14px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.045);
+  transition: background 0.15s;
+}
+.switch:hover { background: rgba(255,255,255,0.08); }
+
+.switch input { display: none; }
+
+.switch .track {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 100px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.switch .thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  transition: transform 0.22s cubic-bezier(0.35, 0.7, 0.3, 1.2);
+}
+.switch input:checked ~ .track { background: var(--green); }
+.switch input:checked ~ .track .thumb { transform: translateX(16px); }
+
+.switch-label { white-space: nowrap; }
